@@ -1,0 +1,65 @@
+## Tic Tac Toe Game Summary:
+
+The Tic Tac Toe game is a two-player game played on a 3x3 grid. The players take turns marking empty cells with their respective 
+symbols, X and O, with the goal of getting three of their symbols in a row, column, or diagonal. The game continues until one 
+player wins or there is a draw.
+
+## Code Documentation:
+
+### HTML Structure:
+The HTML structure consists of a container div that holds the game board, scores, average scores, total games, and reset buttons.
+
+- `div` with class `score-board`: Container for the game scores, average scores, total games, and reset buttons.
+- `div` with class `player-score` and `id="player-x-score-container"`: Container for Player X's score.
+- `span` with class `player-name`: Displays "Player X" text.
+- `span` with class `player-score-value` and `id="player-x-score"`: Displays Player X's score.
+- `div` with class `player-score` and `id="player-o-score-container"`: Container for Player O's score.
+- `span` with class `player-name`: Displays "Player O" text.
+- `span` with class `player-score-value` and `id="player-o-score"`: Displays Player O's score.
+- `div` with class `average-score` and `id="average-x"`: Container for displaying the average score for Player X.
+- `div` with class `average-score` and `id="average-o"`: Container for displaying the average score for Player O.
+- `div` with class `total-games` and `id="total-games"`: Container for displaying the total number of games played.
+- `button` with `id="reset-button"`: Button to reset the game.
+- `button` with `id="reset-score-button"`: Button to reset the scores.
+
+### CSS Styles:
+The CSS styles define the appearance of the game, scoreboard, and buttons.
+
+- Styling for the game board, cells, and hover effect.
+- Styling for the scoreboard, including scores, average scores, and total games.
+- Styling for the reset buttons.
+
+### JavaScript Logic:
+The JavaScript code provides the functionality of the Tic Tac Toe game.
+
+- Variables to keep track of the game state, current player, scores, average scores, and total games.
+- Function to handle cell click event and mark the cell with the current player's symbol.
+- Function to check for a win or draw.
+- Functions to update the scores and average scores.
+- Function to reset the game and scores.
+- Event listeners for cell clicks, reset button clicks, and reset score button clicks.
+
+### Game Initialization:
+- Variables are initialized to store the scores, average scores, and total games retrieved from `localStorage`.
+- Event listener is added to handle the page load event and update the scores, average scores, and total games on the scoreboard.
+
+### Score and Average Calculation:
+- The `updateScore()` function is called when a player wins a game to update the scores and `localStorage`.
+- The `updateAverage()` function calculates the average scores for Player X and Player O based on the total number of games and 
+updates the average score elements on the scoreboard.
+
+### Score Reset:
+- Event listener is added to the reset score button to handle the click event.
+- When the reset score button is clicked, the scores are set to 0, `localStorage` is updated, and the score elements on the 
+scoreboard are reset to 0.
+
+### Game Reset:
+- Event listener is added to the reset button to handle the click event.
+- When the
+
+ reset button is clicked, the game board is cleared, the game state is reset, and the result message is cleared.
+
+## Summary:
+The Tic Tac Toe game implemented with HTML, CSS, and JavaScript allows two players to play the classic game on a 3x3 grid. The game 
+keeps track of the scores for each player and calculates the average scores across multiple game sessions. Players can reset the 
+game, reset the scores, and continue playing. The code provides a structured and interactive implementation of the Tic Tac Toe game.
